@@ -1,18 +1,27 @@
 ﻿namespace ConsoleApp
 {
     using System;
-    using System.Collections.Generic;
-    using System.IO;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     internal class Program
     {
         static void Main(string[] args)
         {
-            var reader = new DataReader();
-            reader.ImportAndPrintData("dataa.csv");
+            // cant handle the command line arguments
+            string importPath = "data.csv";
+            string exportPath = "convertedData.txt";
+            if (args.Length > 0)
+            {
+                importPath = args[0];
+            }
+
+            if (args.Length > 1)
+            {
+                exportPath = args[1];
+            }
+
+            DataProcessing.ProcessData(importPath, exportPath);
+
+            Console.ReadLine();
         }
     }
 }

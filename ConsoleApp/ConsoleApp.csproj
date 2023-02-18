@@ -43,9 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataProcessing.cs" />
     <Compile Include="DataReader.cs" />
+    <Compile Include="DataPrinter.cs" />
+    <Compile Include="IDataReader.cs" />
+    <Compile Include="ImportedObject.cs" />
+    <Compile Include="ImportedObjectBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FileWriter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
